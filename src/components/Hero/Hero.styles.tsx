@@ -8,4 +8,5 @@ export const StyledH1 = styled.h1`
 
 export const HeroContainer = styled.div`
   min-height: 100vh;
+  margin-bottom: 10rem;
 `;
