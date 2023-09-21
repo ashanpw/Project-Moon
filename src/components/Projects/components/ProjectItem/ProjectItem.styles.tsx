@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { ColorTokens } from "../../colors/ColorTokens";
+import { ColorTokens } from "../../../../colors/ColorTokens";
 
 export const TitleContainer = styled.div`
   display: flex;

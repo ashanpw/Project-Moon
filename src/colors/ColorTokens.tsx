@@ -1,4 +1,6 @@
-export const ColorTokens: Record<"light" | "dark", any> = {
+import { ColorTokensType } from "./ColorTokens.types";
+
+export const ColorTokens: ColorTokensType = {
   light: {
     primary: "#000",
     secondary: "#454545",

@@ -58,6 +58,7 @@
     "@storybook/react-webpack5": "^7.1.1",
     "@storybook/testing-library": "^0.2.0",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "babel-plugin-styled-components": "^2.1.4",
     "eslint-plugin-storybook": "^0.6.13",
     "prop-types": "^15.8.1",
     "storybook": "^7.1.1",

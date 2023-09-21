@@ -3,14 +3,16 @@ import styled from "styled-components/macro";
 export const FlexContainer = styled.div`
   display: flex;
   align-items: start;
-  justify-content: center;
   gap: 10rem;
   flex-direction: column;
-
+  max-width: 160rem;
+  margin: auto;
   margin-bottom: 20rem;
+  padding: 5rem;
 
-  @media (min-width: 50em) {
+  @media (min-width: 768px) {
     flex-direction: row;
+    justify-content: center;
   }
 `;
 

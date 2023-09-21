@@ -9,24 +9,6 @@ html {
   font-size: 43.75%;
 }
 
-/* 8px / 16pxp = 50%  */
-@media (min-width: 59em) {
-  html {
-    font-size: 50%;
-  }
-}
-
-/* 1200px = 75em (1200px / 16px = 75em) */
-/*@media (min-width: 75em) { */
-/*  html { */
-/*    /* Set 1 rem equal to 62.5% of the default font size 16px  */
-/*    If user explicitly sets default font size, all text will scale accordingly */
-/*    10px / 16px = 62.5% -> 1rem = 10px */
-
-/*    font-size: 62.5%; */
-/*  } */
-/*} */
-
 h1,
 h2,
 h3,
@@ -35,11 +17,13 @@ h4 {
 }
 
 h1 {
+  /* 8px / 16pxp = 50%  */
+
   font-size: 40rem;
 }
 
 h2 {
-  font-size: 12.8rem;
+  font-size: 8rem;
 }
 
 h3 {
@@ -53,6 +37,26 @@ h4 {
 p {
   font-size: 2rem;
 }
+
+@media (min-width: 481px) {
+  h2 {
+    font-size: 10rem;
+  }
+}
+
+@media (min-width: 600px) {
+  h2 {
+    font-size: 12.8rem;
+  }
+}
+
+
+@media (min-width: 992px) {
+  html {
+    font-size: 50%;
+  }
+}
+
 
 body {
   font-family: "Outfit", sans-serif;

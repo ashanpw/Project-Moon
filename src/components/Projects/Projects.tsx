@@ -1,4 +1,4 @@
-import { ProjectItem } from "../ProjectItem/ProjectItem";
+import { ProjectItem } from "./components/ProjectItem/ProjectItem";
 import { StyledDiv } from "./Projects.styles";
 
 export const Projects = () => {

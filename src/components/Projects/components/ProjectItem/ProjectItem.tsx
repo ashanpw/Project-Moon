@@ -1,5 +1,6 @@
 import { Carousel } from "../Carousel/Carousel";
-import { StyledH4, StyledSecondaryText } from "../TextItem/TextItem.styles";
+import { StyledH4 } from "../../../TextItem/TextItem.styles";
+import { Paragraph } from "../../../Typography/Paragraph";
 import {
   ContentContainer,
   GridContainer,
@@ -13,9 +14,9 @@ export const ProjectItem = () => {
       <Carousel />
       <GridContainer>
         <TitleContainer>
-          <StyledSecondaryText>01</StyledSecondaryText>
+          <Paragraph>01</Paragraph>
           <StyledH4>DRIVER DROWSINESS DETECTION</StyledH4>
-          <StyledSecondaryText>June - August 2019</StyledSecondaryText>
+          <Paragraph>June - August 2019</Paragraph>
         </TitleContainer>
         <ContentContainer>
           <p>

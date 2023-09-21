@@ -1,21 +1,20 @@
+import { ColorTokens } from "../../colors/ColorTokens";
+import { Paragraph } from "../Typography/Paragraph";
 import {
+  StyledDiv,
   StyledH4,
-  StyledPrimaryText,
-  StyledSecondaryText,
+  StyledParagraph,
 } from "./TextItem.styles";
+import { TextItemProps } from "./TextItem.types";
 
-export const TextItem = () => {
+export const TextItem = (props: TextItemProps) => {
+  const {index, company, title, summary} = props;
   return (
-    <div>
-      <StyledSecondaryText>01</StyledSecondaryText>
-      <StyledH4>AMAZON</StyledH4>
-      <StyledSecondaryText>June - July 2023</StyledSecondaryText>
-      <StyledPrimaryText>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem rerum
-        autem, ad nam, id repellat, nemo mollitia molestias explicabo suscipit
-        ipsum necessitatibus! Dolores id laborum nihil modi doloremque,
-        consectetur voluptatum.
-      </StyledPrimaryText>
-    </div>
+    <StyledDiv index={index}>
+      <StyledParagraph>{`0${index + 1}`}</StyledParagraph>
+      <StyledH4>{company}</StyledH4>
+      <StyledParagraph color={ColorTokens.dark.secondary}>{title}</StyledParagraph>
+      <Paragraph>{summary}</Paragraph>
+    </StyledDiv>
   );
 };

@@ -1,7 +1,7 @@
 import "./App.css";
 
-import { Carousel } from "./components/Carousel/Carousel";
-import { Dots } from "./components/NavigationDots/NavigationDots";
+import { Carousel } from "./components/Projects/components/Carousel/Carousel";
+import { Dots } from "./components/Projects/components/NavigationDots/NavigationDots";
 
 import { Experience } from "./components/Experience/Experience";
 import { Tech } from "./components/Tech/Tech";
@@ -13,8 +13,8 @@ import { Stats } from "./components/Stats/Stats";
 function App() {
   return (
     <div>
-      <Hero />
-      <About />
+      {/* <Hero /> */}
+      {/* <About /> */}
       <Stats />
       <Tech />
       <Experience />

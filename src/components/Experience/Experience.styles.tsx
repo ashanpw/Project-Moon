@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 import { ColorTokens } from "../../colors/ColorTokens";
 
-export const StyledH3 = styled.h3`
+export const StyledH2 = styled.h2`
   text-align: center;
   margin-bottom: 20rem;
 `;

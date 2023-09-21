@@ -1,9 +1,8 @@
-import { text } from "../../text";
+import { TextData } from "../../text/TextData";
 import { TwoColumn, StyledH1, H1Container, Table } from "./Stats.styles";
 
 export const Stats = () => {
-  const details = text.about.details.map((data, idx) => {
-    console.log(idx);
+  const details = TextData.about.details.map((data, idx) => {
     return (
       <div key={idx}>
         <strong>{data.header}</strong>
@@ -20,7 +19,7 @@ export const Stats = () => {
       <TwoColumn>
         <Table>{details}</Table>
         <div>
-          <img src="https://fastly.picsum.photos/id/675/400/500.jpg?hmac=2X5NSSStMEerYxgHCfn6vHVAbWFT2X8bbn36EsQvl0Y" />
+          <img src="https://fastly.picsum.photos/id/675/400/500.jpg?hmac=2X5NSSStMEerYxgHCfn6vHVAbWFT2X8bbn36EsQvl0Y" width="100%" alt="hi" />
         </div>
       </TwoColumn>
     </div>
