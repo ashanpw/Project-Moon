@@ -7,6 +7,7 @@ export const StyledH4 = styled.h4`
 `;
 
 export const StyledDiv = styled.div<{index: number}>`
+  order: -1;
   @media (min-width: 768px) {
     order: ${props => props.index % 2 === 0 ? '1' : '-1'};
   }

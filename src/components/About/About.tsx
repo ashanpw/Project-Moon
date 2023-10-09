@@ -5,12 +5,12 @@ import { useRef } from "react";
 export const About = () => {
   const ref = useRef<HTMLDivElement>(null);
 
-  // 0 means that when the viewport of the page crosses 60% of the height from
+  // 0 means that when the viewport of the page crosses 65% of the height from
   // the bottom of the card, start the animation
   // 2 means 100% past the bottom of the card (1), stop the animation
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 0.6", "2 1"],
+    offset: ["0 0.7", "2 1"],
   });
 
   // This is a mapping of what % of the component is visible to a user defined range

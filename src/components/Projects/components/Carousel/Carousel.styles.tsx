@@ -5,22 +5,28 @@ export const EmblaDiv = styled.div`
   max-width: 160rem;
   margin: auto;
   position: relative;
+  margin-bottom: 5rem;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+  
 `;
 
 export const EmblaViewport = styled.div`
   overflow: hidden;
-  margin: 0 10rem 0 10rem;
+  margin: 0 5rem 0 5rem;
   border: 1rem solid #2b2b2b;
-  border-radius: 3rem;
+  border-radius: 5rem;
 
-  @media (min-width: 50em) {
+  @media (min-width: 768px) {
     border-radius: 6.4rem;
+    margin: 0 10rem 0 10rem;
   }
 `;
 
-export const EmblaContainer = styled.div`
+export const EmblaContainer = styled.div<{isMobile: boolean}>`
+  aspect-ratio: ${props => props.isMobile ? "9/16" : "16/9"};
   display: flex;
-  aspect-ratio: 16/9;
   gap: 1rem;
 `;
 
@@ -28,7 +34,7 @@ export const EmblaSlide = styled.div`
   flex: 0 0 100%;
   min-width: 0;
   max-width: 100%;
-  padding: 3rem;
+  
   background-color: #ffdcc2;
 `;
 
@@ -37,6 +43,10 @@ export const ArrowLeftButton = styled(IconArrowLeft)`
   top: 50%;
   left: 5rem;
   cursor: pointer;
+  visibility: hidden;
+  @media (min-width: 768px) {
+    visibility: visible;
+  }
 `;
 
 export const ArrowRightButton = styled(IconArrowRight)`
@@ -44,4 +54,8 @@ export const ArrowRightButton = styled(IconArrowRight)`
   top: 50%;
   right: 5rem;
   cursor: pointer;
+  visibility: hidden;
+  @media (min-width: 768px) {
+    visibility: visible;
+  }
 `;

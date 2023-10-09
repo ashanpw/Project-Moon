@@ -11,7 +11,7 @@ import {
 import { useCallback, useState } from "react";
 import { Dots } from "../NavigationDots/NavigationDots";
 
-export const Carousel = () => {
+export const Carousel = (props: any) => {
   const [emblaRef, emblaApi] = useEmblaCarousel();
 
   const scrollPrev = useCallback(() => {
@@ -34,14 +34,18 @@ export const Carousel = () => {
     <EmblaDiv>
       <ArrowRightButton onClick={scrollNext} size={25} />
       <EmblaViewport ref={emblaRef}>
-        <EmblaContainer>
-          <EmblaSlide>Slide 1</EmblaSlide>
-          <EmblaSlide>Slide 2</EmblaSlide>
-          <EmblaSlide>Slide 3</EmblaSlide>
+        <EmblaContainer isMobile={props.isMobile}>
+          <EmblaSlide key={1}><video src="https://ashanpw-asset-bucket.s3.amazonaws.com/ProjectWindOpening.mp4" width="100%" height="100%" autoPlay = {true}
+        controls = {false}
+        loop = {true}
+        muted = {true}/></EmblaSlide>
+          <EmblaSlide key={2}>Slide 2</EmblaSlide>
+          <EmblaSlide key={3}>Slide 3</EmblaSlide>
         </EmblaContainer>
       </EmblaViewport>
       <ArrowLeftButton onClick={scrollPrev} size={25} />
       <Dots selectedIdx={selectedIdx} size={3} onClickFn={scrollToSlide} />
+
     </EmblaDiv>
   );
 };

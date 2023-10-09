@@ -5,7 +5,7 @@ export const FlexContainer = styled.div`
   align-items: start;
   gap: 10rem;
   flex-direction: column;
-  max-width: 160rem;
+  max-width: 200rem;
   margin: auto;
   margin-bottom: 20rem;
   padding: 5rem;
@@ -26,14 +26,15 @@ export const VerticalLine = styled.hr`
   }
 `;
 
+
 export const BoxHeader = styled.div`
   aspect-ratio: 1 / 1;
   background: linear-gradient(125deg, #333, #000);
   color: white;
   display: flex;
   align-items: center;
-  padding: 2.5rem;
-  border-radius: 0.8rem;
+  padding: 4rem;
+  border-radius: 0.2rem;
 `;
 
 export const StyledUl = styled.ul`
@@ -49,18 +50,23 @@ export const StyledDiv = styled.div`
   flex: 1 1 auto;
 
   grid-template-columns: repeat(2, 1fr);
-  gap: 0rem;
+  gap: 5rem 2rem;
   width: 100%;
+  justify-items: start;
 
-  @media (min-width: 96em) {
+  @media (min-width: 768px) {
+    justify-items: center;
+  }
+
+  @media (min-width: 80em) {
     width: auto;
     grid-template-columns: repeat(4, 1fr);
     gap: 10rem;
-    max-width: 120rem;
+    max-width: 200rem;
   }
 
   text-align: center;
-  justify-items: center;
+  
 `;
 
 export const StyledH4 = styled.h4`

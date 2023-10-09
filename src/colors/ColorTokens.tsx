@@ -3,7 +3,7 @@ import { ColorTokensType } from "./ColorTokens.types";
 export const ColorTokens: ColorTokensType = {
   light: {
     primary: "#000",
-    secondary: "#454545",
+    secondary: "#181818",
     tertiary: "#426BFF",
     quaternary: "#0D0D0D",
     background: "#FBFBFB",

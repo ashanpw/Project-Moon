@@ -2,13 +2,14 @@ export const TextData = {
   about: {
     details: [
       { header: "TITLE", value: "Software Development Engineer II" },
+      { header: "EXPERIENCE", value: "3 Years" },
+      { header: "DOMAIN", value: "Full-Stack, Cloud, DevOps"},
       { header: "SCHOOL", value: "University of Maryland" },
       { header: "DEGREE", value: "B.S. Science" },
-      { header: "YOE", value: "3 Years" },
-      { header: "REGION", value: "US East" },
+
       {
         header: "HOBBIES",
-        value: "Building PCs, online games, and studying Frontend",
+        value: "Building PCs, online games, & centering divs",
       },
     ],
   },

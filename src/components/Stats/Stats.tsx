@@ -1,5 +1,5 @@
 import { TextData } from "../../text/TextData";
-import { TwoColumn, StyledH1, H1Container, Table } from "./Stats.styles";
+import { H1Container, StyledHeader, Table, TwoColumn } from "./Stats.styles";
 
 export const Stats = () => {
   const details = TextData.about.details.map((data, idx) => {
@@ -13,9 +13,8 @@ export const Stats = () => {
   return (
     <div>
       <H1Container>
-        <StyledH1>PROJECT MOON PROJECT MOON PROJECT MOON</StyledH1>
+        <StyledHeader>PROJECT MOON PROJECT MOON PROJECT MOON</StyledHeader>
       </H1Container>
-
       <TwoColumn>
         <Table>{details}</Table>
         <div>

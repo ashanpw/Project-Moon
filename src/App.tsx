@@ -13,8 +13,8 @@ import { Stats } from "./components/Stats/Stats";
 function App() {
   return (
     <div>
-      {/* <Hero /> */}
-      {/* <About /> */}
+      <Hero />
+      <About />
       <Stats />
       <Tech />
       <Experience />

@@ -6,9 +6,9 @@ import {
   GridContainer,
   StyledDiv,
   TitleContainer,
-} from "./ProjectItem.styles";
+} from "./DesktopItem.styles";
 
-export const ProjectItem = () => {
+export const DesktopItem = () => {
   return (
     <StyledDiv>
       <Carousel />
