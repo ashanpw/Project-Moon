@@ -14,8 +14,8 @@ function App() {
   return (
     <div>
       <Hero />
-      <About />
       <Stats />
+      <About />
       <Tech />
       <Experience />
       <Projects />

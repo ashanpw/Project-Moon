@@ -6,7 +6,6 @@ export const TwoColumn = styled.div`
   grid-template-rows: 1fr auto;
   grid-template-columns: auto;
   margin: auto;
-  margin-top: -50rem;
   max-width: 200rem;
   padding: 5rem;
 
@@ -31,31 +30,28 @@ export const StyledHeader = styled.h2`
   }
 
   @media (min-width: 768px) {
-    font-size: 28rem;
+    font-size: 40rem;
   }
   
-`;
-
-export const H1Container = styled.div`
-  width: 100%;
-  overflow: hidden;
 `;
 
 export const Table = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: flex-start;
-  gap: 3rem 3rem;
+  gap: 6rem 4rem;
   margin-bottom: 2rem;
-  margin-top: 45rem;
-  @media (min-width: 768px) {
-    margin-top: 40rem;
-  }
-  @media (min-width: 1280px) {
-    margin-top: 30rem;
-  }
-  
-  
 `;
 
+export const StyledImg = styled.img`
+  border-radius: 1rem;
+  max-height: 112.5rem;
+  object-fit: cover;
+  object-position: top;
+`;
 
+export const StyledH3 = styled.h3`
+  font-weight: 600;
+  font-size: 8rem;
+  margin-bottom: 7.5rem;
+`;

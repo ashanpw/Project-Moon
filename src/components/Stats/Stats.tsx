@@ -1,5 +1,5 @@
 import { TextData } from "../../text/TextData";
-import { H1Container, StyledHeader, Table, TwoColumn } from "./Stats.styles";
+import { StyledH3, StyledHeader, StyledImg, Table, TwoColumn } from "./Stats.styles";
 
 export const Stats = () => {
   const details = TextData.about.details.map((data, idx) => {
@@ -11,16 +11,12 @@ export const Stats = () => {
     );
   });
   return (
-    <div>
-      <H1Container>
-        <StyledHeader>PROJECT MOON PROJECT MOON PROJECT MOON</StyledHeader>
-      </H1Container>
       <TwoColumn>
-        <Table>{details}</Table>
+        <StyledImg src="https://ashanpw-asset-bucket.s3.amazonaws.com/MoonWithMountains.png" width="100%" alt="hi" />
         <div>
-          <img src="https://fastly.picsum.photos/id/675/400/500.jpg?hmac=2X5NSSStMEerYxgHCfn6vHVAbWFT2X8bbn36EsQvl0Y" width="100%" alt="hi" />
+          <StyledH3>STATS</StyledH3>
+          <Table>{details}</Table>
         </div>
       </TwoColumn>
-    </div>
   );
 };

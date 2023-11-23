@@ -1,5 +1,6 @@
 import styled from "styled-components/macro";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+import { ColorTokens } from "../../../../colors/ColorTokens";
 
 export const EmblaDiv = styled.div`
   max-width: 160rem;
@@ -14,7 +15,7 @@ export const EmblaDiv = styled.div`
 
 export const EmblaViewport = styled.div`
   overflow: hidden;
-  margin: 0 5rem 0 5rem;
+  margin: 0 2.5rem 0 2.5rem;
   border: 1rem solid #2b2b2b;
   border-radius: 5rem;
 
@@ -27,15 +28,13 @@ export const EmblaViewport = styled.div`
 export const EmblaContainer = styled.div<{isMobile: boolean}>`
   aspect-ratio: ${props => props.isMobile ? "9/16" : "16/9"};
   display: flex;
-  gap: 1rem;
 `;
 
 export const EmblaSlide = styled.div`
   flex: 0 0 100%;
   min-width: 0;
   max-width: 100%;
-  
-  background-color: #ffdcc2;
+  background-color: #000;
 `;
 
 export const ArrowLeftButton = styled(IconArrowLeft)`

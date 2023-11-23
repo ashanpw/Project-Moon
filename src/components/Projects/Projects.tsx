@@ -6,7 +6,7 @@ import { MobileItem } from "./components/MobileItem";
 export const Projects = () => {
   return (
     <StyledDiv>
-      <h2>PROJECTS</h2>
+      {/* <h2>PROJECTS</h2> */}
       <DesktopItem />
       <MobileItem />
     </StyledDiv>

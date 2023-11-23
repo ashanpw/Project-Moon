@@ -1,69 +1,35 @@
-import { BoxHeader, FlexContainer, StyledDiv, StyledH4, StyledLi, StyledUl, VerticalLine } from './Tech.styles'
+import { TextData } from "../../text/TextData";
+import {
+  GridItem,
+  StyledDiv,
+  StyledH4,
+  StyledLi,
+  StyledUl,
+} from "./Tech.styles";
+import { LunarTextRing } from "./components/LunarTextRing/LunarTextRing";
 
 export const Tech = () => {
+  const gridAreas = ["frontend", "backend", "cloud", "mlai"];
+  const techItemList = TextData.tech.map((t, idx) => {
     return (
-        <FlexContainer>
-            <BoxHeader><h3>TECH</h3><p> G</p></BoxHeader>
-            <VerticalLine></VerticalLine>
-            <StyledDiv>
-                <div>
-                    <StyledH4>FRONTEND</StyledH4>
-                    <StyledUl>
-                        <StyledLi>React</StyledLi>
-                        <StyledLi>HTML / CSS</StyledLi>
-                        <StyledLi>NextJS</StyledLi>
-                        <StyledLi>Playwright</StyledLi>
-                        <StyledLi>Storybook</StyledLi>
-                        <StyledLi>React</StyledLi>
-                        <StyledLi>HTML / CSS</StyledLi>
-                        <StyledLi>NextJS</StyledLi>
-                        <StyledLi>Playwright</StyledLi>
-                        <StyledLi>Storybook</StyledLi>
-                        <StyledLi>React</StyledLi>
-                        <StyledLi>HTML / CSS</StyledLi>
-                        <StyledLi>NextJS</StyledLi>
-                        <StyledLi>Playwright</StyledLi>
-                        <StyledLi>Storybook</StyledLi>
-                    </StyledUl>
-                </div>
-                <div>
-                    <StyledH4>FRONTEND</StyledH4>
-                    <StyledUl>
-                        <StyledLi>React</StyledLi>
-                        <StyledLi>HTML / CSS</StyledLi>
-                        <StyledLi>NextJS</StyledLi>
-                        <StyledLi>Playwright</StyledLi>
-                        <StyledLi>Storybook</StyledLi>
-                        <StyledLi>React</StyledLi>
-                        <StyledLi>HTML / CSS</StyledLi>
-                        <StyledLi>NextJS</StyledLi>
-                        <StyledLi>Playwright</StyledLi>
-                    </StyledUl>
-                </div>
-                <div>
-                    <StyledH4>FRONTEND</StyledH4>
-                    <StyledUl>
-                        <StyledLi>React</StyledLi>
-                        <StyledLi>HTML / CSS</StyledLi>
-                        <StyledLi>NextJS</StyledLi>
-                        <StyledLi>Playwright</StyledLi>
-                        <StyledLi>Storybook</StyledLi>
-                        <StyledLi>React</StyledLi>
-                        <StyledLi>HTML / CSS</StyledLi>
-                        <StyledLi>NextJS</StyledLi>
-                        <StyledLi>Playwright</StyledLi>
-                    </StyledUl>
-                </div>
-                <div>
-                    <StyledH4>FRONTEND</StyledH4>
-                    <StyledUl>
-                        <StyledLi>React</StyledLi>
-                        <StyledLi>HTML / CSS</StyledLi>
-                        <StyledLi>NextJS</StyledLi>
-                        <StyledLi>Playwright</StyledLi>
-                    </StyledUl>
-                </div>
-            </StyledDiv>
-        </FlexContainer>
-    )
-}
+      <GridItem area={gridAreas[idx]}>
+        <StyledH4>{t.title}</StyledH4>
+        <StyledUl>
+          {t.technologies.map((i) => {
+            return <StyledLi>{i}</StyledLi>;
+          })}
+        </StyledUl>
+      </GridItem>
+    );
+  });
+
+  return (
+    <StyledDiv>
+      {techItemList[0]}
+      {techItemList[1]}
+      <LunarTextRing />
+      {techItemList[2]}
+      {techItemList[3]}
+    </StyledDiv>
+  );
+};

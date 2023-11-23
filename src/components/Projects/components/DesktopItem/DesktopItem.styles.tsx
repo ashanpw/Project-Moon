@@ -11,7 +11,7 @@ export const GridContainer = styled.div`
   justify-content: space-between;
   grid-template-rows: 1fr 1fr;
   max-width: 140rem;
-  margin: 0 5rem 0 5rem;
+  margin: 0 2.5rem 0 2.5rem;
   text-align: left;
   align-items: center;
 

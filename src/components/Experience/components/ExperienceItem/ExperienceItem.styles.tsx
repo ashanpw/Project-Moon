@@ -7,8 +7,8 @@ export const TwoColumnWrapper = styled.div`
   grid-template-rows: 1fr auto;
   grid-template-columns: auto;
   margin: auto;
-  max-width: 160rem;
-  padding: 5rem;
+  max-width: 180rem;
+  padding: 2.5rem;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
