@@ -12,14 +12,14 @@ import { Stats } from "./components/Stats/Stats";
 
 function App() {
   return (
-    <div>
+    <>
       <Hero />
       <Stats />
       <About />
       <Tech />
       <Experience />
       <Projects />
-    </div>
+    </>
   );
 }
 

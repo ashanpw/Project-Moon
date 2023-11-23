@@ -5,9 +5,11 @@ import { ColorTokens } from "../../colors/ColorTokens";
 export const StyledDiv = styled.div`
   position: relative;
   background: ${ColorTokens.dark.background};
-  min-width: 100vw;
-  min-height: 100vh;
-  overflow: hidden;
+
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
 `;
 export const AnimatedDiv = styled(motion.div)`
   position: absolute;

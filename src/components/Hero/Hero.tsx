@@ -18,8 +18,7 @@ export const Hero = () => {
     <StyledDiv>
       <AnimatedDiv
         animate={{
-          scale: [50, 2, 2],
-          translateY: [0, -1000],
+          y: [0, -1000],
         }}
         transition={{
           duration: 5,
