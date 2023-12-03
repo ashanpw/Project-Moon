@@ -4,19 +4,23 @@ import { ColorTokens } from "../../colors/ColorTokens";
 
 export const StyledDiv = styled.div`
   position: relative;
-  background: ${ColorTokens.dark.background};
-
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
-    overflow: hidden;
+  background: #040823;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
 `;
-export const AnimatedDiv = styled(motion.div)`
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 20rem;
-  height: 20rem;
-  background: red;
+
+export const Grid = styled(motion.div)`
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+`;
+
+export const StyledMotionH1 = styled(motion.h1)`
+  font-size: 25vw;
+  color: ${ColorTokens.light.background};
+  text-align: center;
+  transform: scale(1, 2);
+  font-weight: bold;
 `;

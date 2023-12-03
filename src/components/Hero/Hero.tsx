@@ -1,30 +1,57 @@
-import { useScroll, useSpring, useTransform } from "framer-motion";
-import { AnimatedDiv, StyledDiv } from "./Hero.styles";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+import { Grid, StyledDiv, StyledMotionH1 } from "./Hero.styles";
 
+// const gridAnimationVariant = {
+//   initial: {},
+//   animate: {
+//     // transition: {
+//     //   staggerChildren: 0.2,
+//     // },
+//   },
+// };
+const textAnimationVariant = {
+  initial: { color: "blue" },
+  animate: {
+    color: ["#0af", "#fff"],
+    transition: {
+      duration: 1,
+      repeat: Infinity,
+    },
+  },
+};
 export const Hero = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    offset: ["end end", "end end"],
-  });
-  const moveX = useTransform(scrollYProgress, [0, 1], [0, 1000]);
-  const translateX = useSpring(moveX, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
   return (
     <StyledDiv>
-      <AnimatedDiv
-        animate={{
-          y: [0, -1000],
-        }}
-        transition={{
-          duration: 5,
-          ease: "easeInOut",
-        }}
-      ></AnimatedDiv>
+      <Grid>
+        <StyledMotionH1
+          variants={textAnimationVariant}
+          initial="initial"
+          animate="animate"
+        >
+          M
+        </StyledMotionH1>
+        <StyledMotionH1
+          variants={textAnimationVariant}
+          initial="initial"
+          animate="animate"
+        >
+          O
+        </StyledMotionH1>
+        <StyledMotionH1
+          variants={textAnimationVariant}
+          initial="initial"
+          animate="animate"
+        >
+          O
+        </StyledMotionH1>
+        <StyledMotionH1
+          variants={textAnimationVariant}
+          initial="initial"
+          animate="animate"
+        >
+          N
+        </StyledMotionH1>
+      </Grid>
     </StyledDiv>
   );
 };
