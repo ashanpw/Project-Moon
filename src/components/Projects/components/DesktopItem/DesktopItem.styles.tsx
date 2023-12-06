@@ -16,9 +16,9 @@ export const GridContainer = styled.div`
   align-items: center;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1.25fr;
+    grid-template-columns: 1fr 2fr;
     margin: 0 10rem 0 10rem;
-    gap: 20rem;
+    gap: 2rem;
   }
 `;
 

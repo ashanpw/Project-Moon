@@ -1,0 +1,45 @@
+.home-icon {
+    position: sticky;
+    top: 5rem;
+    left: 5rem;
+}
+.hero-container {
+    position: relative;
+}
+
+.logo-mask {
+    display: inline-block;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-position: 50% 40%;
+    mask-position: 50% 50%;
+
+    -webkit-mask-image: url("UntitledSmall.png");
+    mask-image: url("UntitledSmall.png");
+
+    @media screen and (min-width: 768px) {
+        -webkit-mask-image: url("Untitled.png");
+        mask-image: url("Untitled.png");
+    }
+}
+
+.video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 15rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    padding: 0 7.5rem;
+}
