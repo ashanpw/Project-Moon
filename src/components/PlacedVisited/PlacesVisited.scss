@@ -4,20 +4,25 @@
     max-width: 1400px;
     height: 70vh; /* or any specific height you want */
     margin-bottom: 30rem;
+    position: relative;
 }
 
 .image-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    width: 27.5%;
+    width: 50%;
     height: 100%;
     place-content: center;
     margin: auto;
     gap: 2rem;
+
+    @media (min-width: 768px) {
+        width: 25%;
+    }
 }
 
 .image {
-    border-radius: 10rem;
+    border-radius: 4rem;
     width: 100%;
     height: 50rem;
     object-fit: cover;
@@ -32,7 +37,20 @@
     text-align: center;
     white-space: nowrap;
     position: absolute;
-    transform: translate(-50%, -100%);
     left: 50%;
-    top: 0%;
+    font-size: 1.8rem;
+    opacity: 0;
+}
+
+.bg-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.circle-icon {
+    opacity: 0;
 }
