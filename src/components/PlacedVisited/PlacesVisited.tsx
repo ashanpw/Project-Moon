@@ -15,6 +15,8 @@ export const PlacesVisited = () => {
     });
     const [hasViewedOnce, setHasViewedOnce] = useState(false);
     const [scope, animate] = useAnimate();
+    // whenever someone clicks on an image in the carousel, this variable sets to true and stops the interval from animating
+    const [stopAnimationOverride, setStopAnimationOverride] = useState(false);
 
     // Starts a looping interval which goes through every image element and performs an animation on it
     // The hasViewedOnce variable ensures a loop isn't created everytime someone views the component
@@ -109,7 +111,7 @@ export const PlacesVisited = () => {
     };
 
     useEffect(() => {
-        if (hasViewedOnce) {
+        if (hasViewedOnce && !stopAnimationOverride) {
             animateIn(imageCarouselData.currItemIdx);
 
             // animations to fade out the previous item
@@ -118,6 +120,28 @@ export const PlacesVisited = () => {
             }
         }
     }, [imageCarouselData]);
+
+    const onImageClickHandler = (idx: number) => {
+        console.log("clicked!", idx, imageCarouselData.currItemIdx);
+
+        setImageCarouselData((prev) => {
+            return {
+                currItemIdx: idx,
+                prevItemIdx: prev.currItemIdx,
+                currBgImage: TextData.placesVisited[idx].src,
+                currBgImageAlt: TextData.placesVisited[idx].alt,
+            };
+        });
+        setStopAnimationOverride(true);
+        animateIn(idx);
+        // Because the interval is still running and it's very wonky to clear intervals in node typescript,
+        // we animate out all elements but the selected element
+        for (let i = 0; i < 7; i++) {
+            if (i !== idx) {
+                animateOut(i);
+            }
+        }
+    };
 
     return (
         <>
@@ -148,6 +172,8 @@ export const PlacesVisited = () => {
                                 key={`grid-item-${idx}`}
                                 className="image"
                                 id={`grid-item-${idx}`}
+                                onClick={() => onImageClickHandler(idx)}
+                                whileHover={{ scale: 1.05 }}
                             />
                             <svg
                                 width="100%"
