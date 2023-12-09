@@ -9,8 +9,7 @@ export const ContentContainer = styled.div``;
 export const GridContainer = styled.div`
   display: grid;
   justify-content: space-between;
-  
-  
+
   grid-template-rows: 1fr 1fr;
   max-width: 140rem;
   margin: 0 2.5rem 0 2.5rem;
@@ -27,7 +26,7 @@ export const GridContainer = styled.div`
 `;
 
 export const StyledDiv = styled.div`
-  max-width: 160rem;
+  max-width: 175rem;
   margin: auto;
   padding-bottom: 15rem;
 `;

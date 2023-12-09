@@ -2,6 +2,7 @@ import styled from "styled-components/macro";
 
 export const StyledUl = styled.ul`
   list-style: none;
+  margin-top: 5rem;
 `;
 
 export const StyledLi = styled.li`
@@ -9,26 +10,13 @@ export const StyledLi = styled.li`
 `;
 
 export const StyledDiv = styled.div`
-  display: grid;
+  display: flex;
   margin: auto;
 
-  grid-template-areas:
-    "lunar lunar lunar lunar lunar"
-    "frontend frontend . backend backend"
-    "cloud cloud . mlai mlai";
-    
   gap: 5rem 2rem;
-  width: 100%;
-  place-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   text-align: center;
-  @media (min-width: 768px) {
-    grid-template-areas:
-      "lunar lunar lunar lunar lunar"
-      "frontend backend . cloud mlai";
-  }
-  @media (min-width: 1200px) {
-    grid-template-areas: "frontend backend lunar cloud mlai";
-  }
 `;
 
 export const StyledH4 = styled.h4`
@@ -36,5 +24,5 @@ export const StyledH4 = styled.h4`
 `;
 
 export const GridItem = styled.div<{ area: string }>`
-  grid-area: ${(props) => props.area};
+  flex: 1;
 `;

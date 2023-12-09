@@ -1,35 +1,31 @@
 import { TextData } from "../../text/TextData";
-import {
-  GridItem,
-  StyledDiv,
-  StyledH4,
-  StyledLi,
-  StyledUl,
-} from "./Tech.styles";
-import { LunarTextRing } from "./components/LunarTextRing/LunarTextRing";
-
+import { SectionTitle } from "../SectionTitle/SectionTitle";
+import { GridItem, StyledDiv, StyledLi, StyledUl } from "./Tech.styles";
+import "./Tech.scss";
 export const Tech = () => {
   const gridAreas = ["frontend", "backend", "cloud", "mlai"];
   const techItemList = TextData.tech.map((t, idx) => {
     return (
-      <GridItem area={gridAreas[idx]}>
-        <StyledH4>{t.title}</StyledH4>
-        <StyledUl>
-          {t.technologies.map((i) => {
-            return <StyledLi>{i}</StyledLi>;
-          })}
-        </StyledUl>
-      </GridItem>
+      <>
+        <GridItem area={gridAreas[idx]}>
+          <strong className="font-light-tertiary">{t.title}</strong>
+          <StyledUl>
+            {t.technologies.map((i) => {
+              return <StyledLi>{i}</StyledLi>;
+            })}
+          </StyledUl>
+        </GridItem>
+        {idx !== TextData.tech.length - 1 && (
+          <div className="tech-vertical-line" />
+        )}
+      </>
     );
   });
 
   return (
-    <StyledDiv>
-      {techItemList[0]}
-      {techItemList[1]}
-      <LunarTextRing />
-      {techItemList[2]}
-      {techItemList[3]}
-    </StyledDiv>
+    <>
+      <SectionTitle>TECHNOLOGIES</SectionTitle>
+      <StyledDiv>{techItemList}</StyledDiv>
+    </>
   );
 };

@@ -4,14 +4,14 @@ import { ColorTokens } from "../../colors/ColorTokens";
 
 export const StyledH4 = styled.h4`
   margin-bottom: 0.5rem;
+  font-weight: 700;
 `;
 
-export const StyledDiv = styled.div<{index: number}>`
+export const StyledDiv = styled.div<{ index: number }>`
   order: -1;
   @media (min-width: 768px) {
-    order: ${props => props.index % 2 === 0 ? '1' : '-1'};
+    order: ${(props) => (props.index % 2 === 0 ? "1" : "-1")};
   }
-  
 `;
 
 export const StyledParagraph = styled.p`

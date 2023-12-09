@@ -1,4 +1,4 @@
-
+import { SectionTitle } from "../SectionTitle/SectionTitle";
 import { StyledDiv } from "./Projects.styles";
 import { DesktopItem } from "./components/DesktopItem";
 import { MobileItem } from "./components/MobileItem";
@@ -6,7 +6,7 @@ import { MobileItem } from "./components/MobileItem";
 export const Projects = () => {
   return (
     <StyledDiv>
-      {/* <h2>PROJECTS</h2> */}
+      <SectionTitle>PROJECTS</SectionTitle>
       <DesktopItem />
       <MobileItem />
     </StyledDiv>

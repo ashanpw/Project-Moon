@@ -10,20 +10,20 @@ export const GridContainer = styled.div`
   display: grid;
   justify-content: space-between;
   grid-template-rows: 1fr 1fr;
-  max-width: 140rem;
-  margin: 0 2.5rem 0 2.5rem;
+  max-width: 165rem;
+  margin: auto;
   text-align: left;
   align-items: center;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 2fr;
-    margin: 0 10rem 0 10rem;
-    gap: 2rem;
+    gap: 30rem;
+    margin: auto;
   }
 `;
 
 export const StyledDiv = styled.div`
-  max-width: 160rem;
+  max-width: 200rem;
   margin: auto;
   padding-bottom: 15rem;
 `;

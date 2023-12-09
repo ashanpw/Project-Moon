@@ -1,29 +1,32 @@
-import { motion, useScroll, useTransform, useViewportScroll } from "framer-motion";
-import { Card, CardContainer, ParagraphContainer, StyledDiv, StyledP } from "./About.styles";
-import { useRef } from "react";
+import { SectionTitle } from "../SectionTitle/SectionTitle";
+import "./About.scss";
 
 export const About = () => {
-  const ref = useRef<HTMLDivElement>(null);
-
-
-
   return (
-    <StyledDiv>
-      <CardContainer>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </CardContainer>
-      <ParagraphContainer>
-        <StyledP>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-          ipsum optio asperiores nam molestiae illum consectetur nesciunt, commodi
-          laborum labore quas, aut expedita fuga minima quidem ratione officia
-          tempora voluptatem!
-        </StyledP>
-      </ParagraphContainer>
-
-    </StyledDiv>
+    <>
+      <SectionTitle>ABOUT</SectionTitle>
+      <div className="about-two-column">
+        <img src="pfpE.png" width="100%" alt="hi" />
+        <div className="text-content-container">
+          <h3>
+            <strong>ASHAN</strong>
+          </h3>
+          <div className="stats-row">
+            <img src="US_flag_icon.png" alt="" className="flag-icon" />
+            <p>SDE</p>
+            <p>3 YOE</p>
+            <p>Virginia</p>
+            <p>--</p>
+            <p>USA</p>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
+            quisquam iste ratione architecto illum suscipit autem sequi dolor.
+            Quod itaque voluptatibus error dolorem corporis fugit fugiat, natus
+            nemo iure. Accusantium.
+          </p>
+        </div>
+      </div>
+    </>
   );
 };

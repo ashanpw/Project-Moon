@@ -14,8 +14,10 @@ h3,
 h4 {
     font-weight: 600;
 }
-p {
-    font-weight: 400;
+p, ul {
+    font-weight: 500;
+    line-height: 4.5rem;
+    font-size: 16px;
 }
 
 h1 {
@@ -58,7 +60,12 @@ body {
     font-family: "Outfit", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 2.5rem;
+    font-size: 16px;
     font-weight: 400;
-    background-color: #ededed;
+    
+    @media (max-width: 768px) {
+      margin: 0 2.5rem 0 2.5rem;
+    }
 }
+
+

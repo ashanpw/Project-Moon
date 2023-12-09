@@ -3,14 +3,13 @@ import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { ColorTokens } from "../../../../colors/ColorTokens";
 
 export const EmblaDiv = styled.div`
-  max-width: 160rem;
+  max-width: 175rem;
   margin: auto;
   position: relative;
   margin-bottom: 5rem;
   @media (min-width: 768px) {
     margin-bottom: 0;
   }
-  
 `;
 
 export const EmblaViewport = styled.div`
@@ -25,8 +24,8 @@ export const EmblaViewport = styled.div`
   }
 `;
 
-export const EmblaContainer = styled.div<{isMobile: boolean}>`
-  aspect-ratio: ${props => props.isMobile ? "9/16" : "16/9"};
+export const EmblaContainer = styled.div<{ isMobile: boolean }>`
+  aspect-ratio: ${(props) => (props.isMobile ? "9/16" : "16/9")};
   display: flex;
 `;
 
@@ -35,26 +34,4 @@ export const EmblaSlide = styled.div`
   min-width: 0;
   max-width: 100%;
   background-color: #000;
-`;
-
-export const ArrowLeftButton = styled(IconArrowLeft)`
-  position: absolute;
-  top: 50%;
-  left: 5rem;
-  cursor: pointer;
-  visibility: hidden;
-  @media (min-width: 768px) {
-    visibility: visible;
-  }
-`;
-
-export const ArrowRightButton = styled(IconArrowRight)`
-  position: absolute;
-  top: 50%;
-  right: 5rem;
-  cursor: pointer;
-  visibility: hidden;
-  @media (min-width: 768px) {
-    visibility: visible;
-  }
 `;

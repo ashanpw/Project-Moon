@@ -12,17 +12,20 @@ import { Stats } from "./components/Stats/Stats";
 import { PlacesVisited } from "./components/PlacedVisited/PlacesVisited";
 
 function App() {
-    return (
-        <>
-            <Hero />
-            <PlacesVisited />
-            {/* <Stats />
+  return (
+    <>
+      {/* <Hero /> */}
+      <About />
+      <Stats />
+      <PlacesVisited />
+      <Tech />
+      {/* <Stats />
       <About />
       <Tech />
-      <Experience />
-      <Projects /> */}
-        </>
-    );
+      <Experience /> */}
+      <Projects />
+    </>
+  );
 }
 
 export default App;

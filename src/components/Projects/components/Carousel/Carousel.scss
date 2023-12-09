@@ -1,0 +1,28 @@
+.project-item-container{ 
+    max-width: 165rem;
+    margin: auto;
+    position: relative;
+    margin-bottom: 5rem;
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+}
+
+.embla-viewport {
+    overflow: hidden;
+    // margin: 0 2.5rem 0 2.5rem;
+  
+    // @media (min-width: 768px) {
+    //   margin: 0 10rem 0 10rem;
+    // }
+}
+
+.embla-container-desktop {
+    aspect-ratio:  "16/9";
+    display: flex;
+}
+
+.embla-container-mobile {
+    aspect-ratio:  "9/16";
+    display: flex;
+}
