@@ -1,0 +1,90 @@
+.two-column-container {
+    margin: auto;
+    padding-bottom: 15rem;
+    display: grid;
+    max-width: 180rem;
+
+    grid-template-areas: "textcontent teamlocationimg";
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "teamlocationimg"
+        "textcontent";
+    @media (min-width: 768px) {
+        grid-template-areas: "textcontent teamlocationimg";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 0 20rem;
+        padding: 5rem;
+        padding-bottom: 25rem;
+    }
+}
+
+.two-column-container-reverse {
+    margin: auto;
+    padding-bottom: 15rem;
+    display: grid;
+    max-width: 180rem;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "teamlocationimg"
+        "textcontent";
+
+    @media (min-width: 768px) {
+        grid-template-areas: "teamlocationimg textcontent";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 0 20rem;
+        padding: 5rem;
+        padding-bottom: 25rem;
+    }
+}
+
+.vertical-text-img-container {
+    display: flex;
+    writing-mode: vertical-rl;
+    min-height: 100%;
+    justify-content: space-around;
+    margin-left: 1.5rem;
+    order: 1;
+}
+
+.vertical-text-img-container-reverse {
+    display: flex;
+    order: 1;
+    justify-content: space-around;
+    writing-mode: vertical-rl;
+    margin-left: 1.5rem;
+    @media (min-width: 768px) {
+        transform: rotate(-180deg);
+        margin-right: 1.5rem;
+        margin-left: 0;
+        order: 0;
+    }
+}
+
+.experience-img {
+    width: 100%;
+}
+.experience-two-column-reverse {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    width: 100%;
+    margin: auto;
+    grid-area: teamlocationimg;
+    place-self: end;
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 10fr;
+    }
+}
+
+.experience-two-column {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    width: 100%;
+    margin: auto;
+    grid-area: teamlocationimg;
+}

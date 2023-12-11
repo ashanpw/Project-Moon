@@ -1,0 +1,26 @@
+.text-item-container {
+    grid-area: textcontent;
+    margin-top: 1.5rem;
+    @media (min-width: 435px) {
+        margin-top: 7.5rem;
+    }
+}
+
+.text-item-number {
+    margin-bottom: 2.4rem;
+}
+
+.text-item-company {
+    margin-bottom: 2.4rem;
+}
+.text-item-grid {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr auto 1fr;
+    place-items: start center;
+    font-weight: 500;
+    margin-bottom: 7.5rem;
+}
+
+.p-justify-left {
+    justify-self: flex-start;
+}

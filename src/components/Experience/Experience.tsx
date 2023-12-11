@@ -1,14 +1,15 @@
 import { TextData } from "../../text/TextData";
+import { SectionTitle } from "../SectionTitle/SectionTitle";
 import { ExperienceItem } from "./components/ExperienceItem/ExperienceItem";
-import { StyledDiv, StyledH2 } from "./Experience.styles";
+import "./Experience.scss";
 
 export const Experience = () => {
-  return (
-    <StyledDiv>
-      {/* <StyledH2>EXPERIENCE</StyledH2> */}
-      {TextData.experience.map((e, idx) => {
-        return <ExperienceItem {...e} index={idx} />
-      })}
-    </StyledDiv>
-  );
+    return (
+        <div className="experience-container global-margin">
+            <SectionTitle>EXPERIENCE</SectionTitle>
+            {TextData.experience.map((e, idx) => {
+                return <ExperienceItem {...e} index={idx} />;
+            })}
+        </div>
+    );
 };

@@ -42,9 +42,9 @@ export const Hero = () => {
                     </video>
                 </div>
                 <div className="footer">
-                    <p style={{ placeSelf: "start" }}>SOFTWARE ENGINEER</p>
-                    <p style={{ paddingRight: "15rem" }}>ASHAN PANDUWAWALA</p>
-                    <p style={{ placeSelf: "end" }}>PORTFOLIO 2023</p>
+                    <p>SOFTWARE ENGINEER</p>
+                    <p>PORTFOLIO 2023</p>
+                    <p>ASHAN</p>
                 </div>
             </div>
         </>

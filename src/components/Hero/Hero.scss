@@ -6,24 +6,25 @@
 }
 .hero-container {
     position: relative;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .logo-mask {
     display: inline-block;
     width: 100%;
-    min-height: 100vh;
     overflow: hidden;
 
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
 
-    -webkit-mask-position: 50% 40%;
-    mask-position: 50% 50%;
+    -webkit-mask-position: 50% 35%;
+    mask-position: 50% 35%;
 
     -webkit-mask-image: url("UntitledSmall.png");
     mask-image: url("UntitledSmall.png");
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
         -webkit-mask-image: url("Untitled.png");
         mask-image: url("Untitled.png");
     }
@@ -37,10 +38,21 @@
 
 .footer {
     position: absolute;
-    width: 100%;
+
     bottom: 15rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    place-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
     padding: 0 7.5rem;
+    font-weight: 600;
+    width: 100%;
+    gap: 1rem 5rem;
+
+    @media (min-width: 1000px) {
+        writing-mode: vertical-rl;
+        transform: rotate(-180deg);
+        height: 100vh;
+        bottom: 0rem;
+    }
 }

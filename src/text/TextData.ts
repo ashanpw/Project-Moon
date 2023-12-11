@@ -131,7 +131,7 @@ export const TextData = {
     experience: [
         {
             company: "AMAZON",
-            title: "Software Development Engineer",
+            title: "SOFTWARE DEV. ENGINEER I",
             summary:
                 "Riot Games, the company that acts as the main distributor of the video game, has been in charge of managing video game, has been in charge of Riot Games, the company that acts as the main distributor of the video game, has been in charge of managing video game, has been in charge of ",
             team: "AWS App Mesh",
@@ -141,7 +141,7 @@ export const TextData = {
         },
         {
             company: "AMAZON",
-            title: "Software Development Engineer",
+            title: "SOFTWARE DEV. ENGINEER II",
             summary:
                 "Riot Games, the company that acts as the main distributor of the video game, has been in charge of managing video game, has been in charge of Riot Games, the company that acts as the main distributor of the video game, has been in charge of managing video game, has been in charge of ",
             team: "AWS App Mesh",

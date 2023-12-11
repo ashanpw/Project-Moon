@@ -3,18 +3,17 @@ import { Paragraph } from "../Typography/Paragraph";
 import { ColorTokens } from "../../colors/ColorTokens";
 
 export const StyledH4 = styled.h4`
-  margin-bottom: 0.5rem;
-  font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
 `;
 
 export const StyledDiv = styled.div<{ index: number }>`
-  order: -1;
-  @media (min-width: 768px) {
-    order: ${(props) => (props.index % 2 === 0 ? "1" : "-1")};
-  }
+    grid-area: textcontent;
 `;
 
 export const StyledParagraph = styled.p`
-  color: ${ColorTokens.dark.secondary};
-  margin-bottom: 2.4rem;
+    color: ${ColorTokens.dark.secondary};
+    margin-bottom: 2.4rem;
 `;
+
+// TODO: delete this file after removing refs from DesktopItem.tsx

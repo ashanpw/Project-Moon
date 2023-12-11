@@ -1,23 +1,26 @@
-import { ColorTokens } from "../../../../colors/ColorTokens";
 import { TextItem } from "../../../TextItem/TextItem";
-import { Paragraph } from "../../../Typography/Paragraph";
-import { StyledDiv, StyledImg, TwoColumnWrapper } from "./ExperienceItem.styles";
 import { ExperienceItemProps } from "./ExperienceItem.types";
+import "./ExperienceItem.scss";
 
 export const ExperienceItem = (props: ExperienceItemProps) => {
-  const {company, title, summary, team, timeline, imgUrl, imgAlt, index} = props;
-  return (
-    <TwoColumnWrapper>
-      <StyledDiv>
-        <StyledImg
-          src={imgUrl}
-          width="100%"
-          alt={imgAlt}
-        />
-        <Paragraph>{team}</Paragraph>
-        <Paragraph color={ColorTokens.dark.secondary}>{timeline}</Paragraph>
-      </StyledDiv>
-      <TextItem index={index} company={company} title={title} summary={summary} />
-    </TwoColumnWrapper>
-  );
+    const { company, title, summary, team, timeline, imgUrl, imgAlt, index } =
+        props;
+    const reverseSuffix = index % 2 === 0 ? "" : "-reverse";
+    return (
+        <div className={`two-column-container${reverseSuffix}`}>
+            <div className={`experience-two-column${reverseSuffix}`}>
+                <div className={`vertical-text-img-container${reverseSuffix}`}>
+                    <p className="font-dark-tertiary">AWS APP MESH</p>
+                    <p className="font-dark-tertiary">SEATTLE WA</p>
+                </div>
+                <img src={imgUrl} alt={imgAlt} className="experience-img" />
+            </div>
+            <TextItem
+                index={index}
+                company={company}
+                title={title}
+                summary={summary}
+            />
+        </div>
+    );
 };

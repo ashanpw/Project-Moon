@@ -3,12 +3,51 @@
 }
 
 .tech-vertical-line {
-    width: 1px; 
-    height: 600px; 
+    width: 1px;
+    height: 600px;
 
     background-color: #000;
 }
 
+.item {
+    flex: 1;
+    position: relative;
+    border-left: #000 1px solid;
+    border-right: #000 1px solid;
+    // this makes the lines overlap so that when we scale down to mobile it's easy to hide the extra lines
+    margin: 0 -1px 25rem 0;
+}
 
+@media (max-width: 1200px) {
+    .item {
+        flex-basis: 50%;
+        border-left: none;
+    }
 
+    .item:nth-child(even) {
+        order: 1; /* Change the order of even items to move them to the second row */
+    }
 
+    .vertical-line {
+        display: none; /* Hide the vertical lines when in two rows */
+    }
+}
+
+.tech-ul {
+    list-style: none;
+    margin-top: 5rem;
+}
+
+.tech-li {
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.tech-container {
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+    // gap: 5rem 2rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
