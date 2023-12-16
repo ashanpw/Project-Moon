@@ -7,6 +7,7 @@ import {
   StyledDiv,
   TitleContainer,
 } from "./DesktopItem.styles";
+import { TextData } from "../../../../text/TextData";
 
 export const DesktopItem = () => {
   return (
@@ -15,17 +16,11 @@ export const DesktopItem = () => {
       <GridContainer>
         <TitleContainer>
           <Paragraph>01</Paragraph>
-          <StyledH4>DRIVER DROWSINESS DETECTION</StyledH4>
-          <Paragraph>June - August 2019</Paragraph>
+          <StyledH4>{TextData.projects.desktopItems[0].title}</StyledH4>
+          <Paragraph>{TextData.projects.desktopItems[0].years}</Paragraph>
         </TitleContainer>
         <ContentContainer>
-          <p>
-            Riot Games, the company that acts as the main distributor of the
-            video game, has been in charge of managing video game, has been in
-            charge of Riot Games, the company that acts as the main distributor
-            of the video game, has been in charge of managing video game, has
-            been in charge of
-          </p>
+          <p>{TextData.projects.desktopItems[0].description}</p>
         </ContentContainer>
       </GridContainer>
     </StyledDiv>
