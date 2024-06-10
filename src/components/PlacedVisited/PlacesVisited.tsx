@@ -77,7 +77,7 @@ export const PlacesVisited = () => {
         // animates background to show
         animate(
             `#background-img-${idx}`,
-            { opacity: 0.5 },
+            { opacity: 0.7 },
             { ease: "easeOut", duration: 0.5 }
         );
     };
@@ -163,7 +163,7 @@ export const PlacesVisited = () => {
                                 className="location-text"
                                 id={`location-text-${idx}`}
                             >
-                                Mount Ranier
+                                {pl.location}
                             </p>
 
                             <motion.img

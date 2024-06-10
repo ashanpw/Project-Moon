@@ -21,33 +21,42 @@ export const TextData = {
   },
   placesVisited: [
     {
-      src: "https://fastly.picsum.photos/id/1082/1920/1080.jpg?hmac=R-FW85Ql3APTWaXe09q_4kjyylVzjB_EySE3UwZOrLU",
+      src: "https://ashanpw-asset-bucket.s3.amazonaws.com/camera-photos/DSC_0430-min.jpg",
+      location: "Dotonbori, Japan",
+      alt: "Dotonbori, Japan",
+    },
+    {
+      src: "https://ashanpw-asset-bucket.s3.amazonaws.com/camera-photos/DSC_0759-min.jpg",
+      location: "Nakatsugawa, Japan",
+      alt: "Fushimi Inari Shrine, Japan",
+    },
+    {
+      src: "https://ashanpw-asset-bucket.s3.amazonaws.com/camera-photos/DSC_9840-min.jpg",
+      location: "Fushimi Inari Shrine, Japan",
+      alt: "Fushimi Inari Shrine, Japan",
+    },
+    {
+      src: "https://ashanpw-asset-bucket.s3.amazonaws.com/camera-photos/DSC_2620-min.jpg",
+      location: "Shirakawa-go, Japan",
       alt: "some image",
     },
     {
-      src: "https://fastly.picsum.photos/id/424/1920/1080.jpg?hmac=JzwsjH5Hrdi5_3bo5flu2W0XaDry_ZmPotU9x0KEja4",
+      src: "https://ashanpw-asset-bucket.s3.amazonaws.com/camera-photos/DSC_2951-min.jpg",
+      location: "Teamlabs Borderless, Japan",
+      alt: "some image",
+    },
+
+    {
+      src: "https://ashanpw-asset-bucket.s3.amazonaws.com/camera-photos/DSC_8120-min.jpg",
+      location: "Seoul, Korea",
       alt: "some image",
     },
     {
-      src: "https://fastly.picsum.photos/id/1082/1920/1080.jpg?hmac=R-FW85Ql3APTWaXe09q_4kjyylVzjB_EySE3UwZOrLU",
+      src: "https://ashanpw-asset-bucket.s3.amazonaws.com/camera-photos/DSC_3096-min.jpg",
+      location: "Teamlabs Borderless, Japan",
       alt: "some image",
     },
-    {
-      src: "https://fastly.picsum.photos/id/424/1920/1080.jpg?hmac=JzwsjH5Hrdi5_3bo5flu2W0XaDry_ZmPotU9x0KEja4",
-      alt: "some image",
-    },
-    {
-      src: "https://fastly.picsum.photos/id/1082/1920/1080.jpg?hmac=R-FW85Ql3APTWaXe09q_4kjyylVzjB_EySE3UwZOrLU",
-      alt: "some image",
-    },
-    {
-      src: "https://fastly.picsum.photos/id/424/1920/1080.jpg?hmac=JzwsjH5Hrdi5_3bo5flu2W0XaDry_ZmPotU9x0KEja4",
-      alt: "some image",
-    },
-    {
-      src: "https://fastly.picsum.photos/id/424/1920/1080.jpg?hmac=JzwsjH5Hrdi5_3bo5flu2W0XaDry_ZmPotU9x0KEja4",
-      alt: "some image",
-    },
+
   ],
   tech: [
     {
